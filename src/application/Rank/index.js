@@ -3,7 +3,7 @@ import React from 'react';
 function Rank (){
   return(
     <div>
-      Rankdddss对对对发发发
+      Rankdddss对对对发发发ssss
     </div>
   )
 }
