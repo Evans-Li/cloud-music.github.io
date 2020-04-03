@@ -23,6 +23,9 @@ import { connect } from 'react-redux'
 function Singers(props) {
   const { singerList, enterLoading, pullUpLoading, pullDownLoading, pageCount } = props
   const { updateDispatch, getHotSingerDispatch, pullUpRefreshDispatch, pullDownRefreshDispatch} = props
+
+  const singerListJS = singerList.toJS()
+
   const [category, setCategory] = useState('')
   const [alpha, setAlpha] = useState('')
   const handleUpdateAlpha = (val) => {
@@ -38,16 +41,15 @@ function Singers(props) {
     return (
       <List>
         {
-          singerList.map((item,index) => {
-            return (
-              <ListItem key={index}>
+          singerListJS.map((item,index) => (
+              <ListItem key={item.id+index}>
                 <div className='img_wrapper'>
-                  <img src={`${item.picUrl}?param=300x300`} width='100%' height='100%' alt='music' />
+                  <img src={item.picUrl+'?param=300x300'} width='100%' height='100%' alt='music' />
                 </div>
                 <span className='name'>{item.name}</span>
               </ListItem>
             )
-          })
+          )
         }
       </List>
     )
