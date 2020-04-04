@@ -53,4 +53,9 @@ export const ListItem = styled.div`
     color: ${style ["font-color-desc"]};
     font-weight: 500;
   }
-`;
+`
+export const ScrollContainer = styled.div`
+width: 100%;
+height: 100%;
+overflow: hidden;
+`
