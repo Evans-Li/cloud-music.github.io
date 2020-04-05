@@ -71,7 +71,7 @@ function Singers(props) {
   }
 
   useEffect(() => {
-    if(!singerList.length && !category && !alpha){
+    if(!singerList.size && !category && !alpha){
       getHotSingerDispatch()
     }
   }, [])
