@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useContext } from 'react';
 import Horizontal from '../../baseUI/HorizontalItem'
 import { categoryTypes, alphaTypes } from '../../api/config'
 import {
@@ -21,24 +21,29 @@ import Scroll from '../../baseUI/Scroll';
 import { connect } from 'react-redux'
 import Loading from '../../baseUI/Loading'
 import LazyLoad, { forceCheck } from 'react-lazyload';
+import { CHANGE_CATEGORY, CHANGE_ALPHA, CategoryDataContext } from './data'
 
 
 function Singers(props) {
   const { singerList, enterLoading, pullUpLoading, pullDownLoading, pageCount } = props
   const { updateDispatch, getHotSingerDispatch, pullUpRefreshDispatch, pullDownRefreshDispatch } = props
   // const singerListJS = singerList.toJS()
-  const [category, setCategory] = useState('')
-  const [alpha, setAlpha] = useState('')
+  const { data, dispatch } = useContext(CategoryDataContext);
+  const { category, alpha } = data.toJS();
+
+
+
+
   const scrollRef = useRef(null);
   const handleUpdateAlpha = (newVal) => {
-    if(alpha === newVal) return;
-    setAlpha(newVal)
+    if (alpha === newVal) return;
+    dispatch({type: CHANGE_ALPHA, data: newVal})
     updateDispatch(category, newVal)
     scrollRef.current.refresh();
   }
   const handleUpdateCategory = (newVal) => {
-    if(category === newVal) return;
-    setCategory(newVal)
+    if (category === newVal) return;
+    dispatch({type: CHANGE_CATEGORY, data: newVal})
     updateDispatch(newVal, alpha)
     scrollRef.current.refresh();
   }
@@ -50,7 +55,7 @@ function Singers(props) {
   }
 
   const renderSingerList = () => {
-    const {singerList} = props
+    const { singerList } = props
     return (
       <List>
         {
@@ -71,13 +76,13 @@ function Singers(props) {
   }
 
   useEffect(() => {
-    if(!singerList.size && !category && !alpha){
+    if (!singerList.size) {
       getHotSingerDispatch()
     }
   }, [])
-  useEffect(()=>{
+  useEffect(() => {
     scrollRef.current.refresh();
-  },[])
+  }, [])
 
   return (
     <div>
@@ -98,7 +103,7 @@ function Singers(props) {
       </NavContainer>
       <ListContainer>
         <Scroll
-          ref={ scrollRef }
+          ref={scrollRef}
           onScroll={forceCheck}
           pullUp={handlePullUp}
           pullDown={handlePullDown}
