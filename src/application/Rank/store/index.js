@@ -17,7 +17,8 @@ const changeLoading = (data)=>({
 export const getRankList = ()=>{
   return dispatch =>{
     getRankListRequest().then((res)=>{
-      let list = res && res.list
+      console.log(res)
+      let list = res.list
       dispatch(changeRankList(list))
       dispatch(changeLoading(false))
     })
@@ -27,7 +28,7 @@ export const getRankList = ()=>{
 
 const defaultState = fromJS({
   list: [],
-  isLoading: true
+  loading: true
 })
 
 const reducer = (state = defaultState, action) =>{
@@ -35,7 +36,7 @@ const reducer = (state = defaultState, action) =>{
     case CHANGE_RANK_LIST:
       return state.set('list',action.data)
     case CHANGE_LOADING:
-      return state.set('isLoading',action.data)
+      return state.set('loading',action.data)
     default:
       return state
   }
