@@ -12,7 +12,7 @@ export const Container = styled.div`
   background: ${style["background-color"]};
   transform-origin: right bottom;
   &.fly-enter, &.fly-appear {
-    transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);  //translate3d后不加空格
   }
   &.fly-enter-active, &.fly-appear-active {
     transition: transform .3s;
