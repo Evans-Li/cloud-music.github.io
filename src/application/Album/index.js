@@ -8,6 +8,9 @@ import { getName, getCount } from '../../api/utils'
 function Album(props) {
 
   const [showStatus, setShowStatus] = useState(true);
+  const [title, setTitle] = useState("歌单");
+  const [isMarquee, setIsMarquee] = useState(true);//是否跑马灯
+
 
   const currentAlbum = {
 
@@ -134,8 +137,9 @@ function Album(props) {
       onExited={props.history.goBack}
     >
       <Container>
-        <Header></Header>
+        <Header title={title} handleClick={handleBack} isMarquee={isMarquee} ></Header>
         <Scroll bounceTop={false}>
+          <div>
             <TopDesc background={currentAlbum.coverImgUrl}>
               <div className="background">
                 <div className="filter"></div>
@@ -205,7 +209,9 @@ function Album(props) {
               }
             </SongItem>
           </SongList>
+          </div>
         </Scroll>
+
       </Container>
     </CSSTransition>
   )
