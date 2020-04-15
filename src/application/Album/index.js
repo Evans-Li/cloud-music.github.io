@@ -89,6 +89,34 @@ function Album(props) {
           name: "学友 热"
         }
       },
+      {
+        name: "我真的受伤了",
+        ar: [{ name: "张学友" }, { name: "周华健" }],
+        al: {
+          name: "学友 热"
+        }
+      },
+      {
+        name: "我真的受伤了",
+        ar: [{ name: "张学友" }, { name: "周华健" }],
+        al: {
+          name: "学友 热"
+        }
+      },
+      {
+        name: "我真的受伤了",
+        ar: [{ name: "张学友" }, { name: "周华健" }],
+        al: {
+          name: "学友 热"
+        }
+      },
+      {
+        name: "我真的受伤了",
+        ar: [{ name: "张学友" }, { name: "周华健" }],
+        al: {
+          name: "学友 热"
+        }
+      },
     ]
   }
   const handleBack = () => {
@@ -106,8 +134,8 @@ function Album(props) {
       onExited={props.history.goBack}
     >
       <Container>
+        <Header></Header>
         <Scroll bounceTop={false}>
-          <div>
             <TopDesc background={currentAlbum.coverImgUrl}>
               <div className="background">
                 <div className="filter"></div>
@@ -148,7 +176,6 @@ function Album(props) {
                 更多
               </div>
             </Menu>
-          </div>
           <SongList>
             <div className="first_line">
               <div className="play_all">
