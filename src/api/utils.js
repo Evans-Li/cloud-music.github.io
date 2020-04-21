@@ -42,3 +42,5 @@ export const getName = list => {
   });
   return str;
 };
+
+export const HEADER_HEIGHT = 45;

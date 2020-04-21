@@ -8,13 +8,13 @@ const HeaderContainer = styled.div`
   padding: 6px 10px;
   padding-top: 10px;
   width: 100%;
-  height: 40px;
+  height: 35px;
   display: flex;
-  line-hight: 40px;
+  line-hight: 35px;
   z-index: 100;
   color: ${style["font-color-light"]};
   .back{
-    // margin-left: 10px;
+    margin-left: 10px;
     font-size: 20px;
     width: 20px
   }
@@ -22,20 +22,27 @@ const HeaderContainer = styled.div`
     padding-left: 10px;
     font-size: ${style['font-size-l']};
     font-weight: 700;
-    line-hight: 40px;
+    line-hight: 35px;
     position: relative;
-    top: 1px;
+    top: 30px;
   }
+  .head{
+    position: absolute;
+    top:  4px;
+  }
+  
 `
 
 const Header = React.forwardRef((props, ref)=>{
+
+  
   const { isMarquee, title, handleClick } = props
   return(
     <div>
       <HeaderContainer ref={ref}>
         <i className='back iconfont' onClick={handleClick}>&#xe655;</i>
         {
-          isMarquee ? <marquee><h1>{title}</h1></marquee>
+          isMarquee ? <marquee><h1 className='head'>{title}</h1></marquee>
         : <h1>{title}</h1>
         }
       </HeaderContainer>
