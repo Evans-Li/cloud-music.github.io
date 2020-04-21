@@ -44,3 +44,5 @@ export const getName = list => {
 };
 
 export const HEADER_HEIGHT = 45;
+
+export const isEmptyObject = obj => !obj || Object.keys(obj).length === 0;

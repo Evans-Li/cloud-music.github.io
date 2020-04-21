@@ -3,12 +3,19 @@ import { CSSTransition } from 'react-transition-group'
 import { Container, Menu, TopDesc, SongItem, SongList } from './style'
 import Header from '../../baseUI/Header'
 import Scroll from '../../baseUI/Scroll'
-import { getName, getCount, HEADER_HEIGHT } from '../../api/utils'
+import { getName, getCount, HEADER_HEIGHT, isEmptyObject } from '../../api/utils'
 import style from '../../assets/global-style'
+import { connect } from 'react-redux'
+import { getAlbumList, changeEnterLoading } from './store/actionCreators'
+
 
 
 function Album(props) {
-
+  
+  let id = props.match.params.id
+  const { currentAlbum: currentAlbumImmutable, enterLoading } = props
+  const { getAlbumDataDispatch } = props
+  let currentAlbum = currentAlbumImmutable.toJS()
   const [showStatus, setShowStatus] = useState(true);
   const [title, setTitle] = useState("歌单");
   const [isMarquee, setIsMarquee] = useState(true);//是否跑马灯
@@ -32,118 +39,13 @@ function Album(props) {
       setIsMarquee (false);
     }
   };
+
+  useEffect(()=>{
+    getAlbumDataDispatch(id)
+  },[getAlbumDataDispatch, id])
   
 
-  const currentAlbum = {
-
-    creator: {
-      avatarUrl: "http://p1.music.126.net/O9zV6jeawR43pfiK2JaVSw==/109951164232128905.jpg",
-      nickname: "浪里推舟"
-    },
-    coverImgUrl: "http://p2.music.126.net/ecpXnH13-0QWpWQmqlR0gw==/109951164354856816.jpg",
-    subscribedCount: 2010711,
-    name: "听完就睡，耳机是天黑以后柔软的梦境",
-    tracks: [
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-      {
-        name: "我真的受伤了",
-        ar: [{ name: "张学友" }, { name: "周华健" }],
-        al: {
-          name: "学友 热"
-        }
-      },
-    ]
-  }
+  
   const handleBack = () => {
     setShowStatus(false);
   };
@@ -160,7 +62,9 @@ function Album(props) {
     >
       <Container>
         <Header ref={headerEl} title={title} handleClick={handleBack} isMarquee={isMarquee} ></Header>
-        <Scroll bounceTop={false} onScroll={handleScroll} >
+        {
+          !isEmptyObject(currentAlbum) ? 
+        (<Scroll bounceTop={false} onScroll={handleScroll} >
           <div>
             <TopDesc background={currentAlbum.coverImgUrl}>
               <div className="background">
@@ -232,11 +136,27 @@ function Album(props) {
             </SongItem>
           </SongList>
           </div>
-        </Scroll>
-
+        </Scroll>)
+        : null
+      }
       </Container>
     </CSSTransition>
   )
 }
 
-export default React.memo(Album)
+
+const mapStateToProps = state =>({
+  currentAlbum: state.getIn(['album', 'currentAlbum']),
+  enterLoading: state.getIn(['album', 'enterLoading'])
+})
+
+const mapDispatchToProps = dispatch =>{
+  return {
+    getAlbumDataDispatch(id){
+      dispatch(getAlbumList(id))
+      dispatch(changeEnterLoading(true))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(Album)) 
