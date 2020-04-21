@@ -24,7 +24,7 @@ const HeaderContainer = styled.div`
     font-weight: 700;
     line-hight: 35px;
     position: relative;
-    top: 30px;
+    top: 2px;
   }
   .head{
     position: absolute;
@@ -42,7 +42,7 @@ const Header = React.forwardRef((props, ref)=>{
       <HeaderContainer ref={ref}>
         <i className='back iconfont' onClick={handleClick}>&#xe655;</i>
         {
-          isMarquee ? <marquee><h1 className='head'>{title}</h1></marquee>
+          isMarquee ? (<marquee><h1 className='head'>{title}</h1></marquee>)
         : <h1>{title}</h1>
         }
       </HeaderContainer>

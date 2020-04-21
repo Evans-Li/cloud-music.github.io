@@ -18,7 +18,7 @@ function Album(props) {
   let currentAlbum = currentAlbumImmutable.toJS()
   const [showStatus, setShowStatus] = useState(true);
   const [title, setTitle] = useState("歌单");
-  const [isMarquee, setIsMarquee] = useState(true);//是否跑马灯
+  const [isMarquee, setIsMarquee] = useState(false);//是否跑马灯
   const headerEl = useRef()
 
 
