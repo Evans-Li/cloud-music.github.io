@@ -17,7 +17,6 @@ const changeLoading = (data)=>({
 export const getRankList = ()=>{
   return dispatch =>{
     getRankListRequest().then((res)=>{
-      console.log(res)
       let list = res.list
       dispatch(changeRankList(list))
       dispatch(changeLoading(false))
