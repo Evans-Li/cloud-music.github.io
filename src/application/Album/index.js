@@ -7,6 +7,7 @@ import { getName, getCount, HEADER_HEIGHT, isEmptyObject } from '../../api/utils
 import style from '../../assets/global-style'
 import { connect } from 'react-redux'
 import { getAlbumList, changeEnterLoading } from './store/actionCreators'
+import Loading from '../../baseUI/Loading'
 
 
 
@@ -138,6 +139,9 @@ function Album(props) {
           </div>
         </Scroll>)
         : null
+      }
+      {
+        enterLoading ? <Loading /> : null
       }
       </Container>
     </CSSTransition>
