@@ -23,7 +23,7 @@ function Album(props) {
   const headerEl = useRef()
 
 
-  const handleScroll = (pos) => {
+  const handleScroll = useCallback( (pos) => {
     let minScrollY = -HEADER_HEIGHT;
     let percent = Math.abs(pos.y / minScrollY);
     let headerDom = headerEl.current;
@@ -39,7 +39,7 @@ function Album(props) {
       setTitle("歌单");
       setIsMarquee(false);
     }
-  };
+  },[currentAlbum])
 
   useEffect(() => {
     getAlbumDataDispatch(id)
@@ -47,9 +47,9 @@ function Album(props) {
 
 
 
-  const handleBack = () => {
+  const handleBack = useCallback(() => {
     setShowStatus(false);
-  };
+  },[])
 
   const renderTopDesc = () => {
     return (
