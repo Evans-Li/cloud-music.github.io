@@ -22,6 +22,7 @@ import { connect } from 'react-redux'
 import Loading from '../../baseUI/Loading'
 import LazyLoad, { forceCheck } from 'react-lazyload';
 import { CHANGE_CATEGORY, CHANGE_ALPHA, CategoryDataContext } from './data'
+import { renderRoutes } from 'react-router-config'
 
 
 function Singers(props) {
@@ -54,13 +55,17 @@ function Singers(props) {
     pullDownRefreshDispatch(category, alpha);
   }
 
+  const enterDetail = (id)=>{
+    props.history.push(`/singers/${id}`)
+  }
+
   const renderSingerList = () => {
     const { singerList } = props
     return (
       <List>
         {
           singerList.toJS().map((item, index) => (
-            <ListItem key={item.id + index}>
+            <ListItem key={item.id + index} onClick={()=> enterDetail(item.id)} >
               <div className='img_wrapper'>
                 <LazyLoad placeholder={<img width="100%" height="100%" src={require('./singer.png')} alt="music" />}>
                   <img src={item.picUrl + '?param=300x300'} width='100%' height='100%' alt='music' />
@@ -114,6 +119,7 @@ function Singers(props) {
           {renderSingerList()}
         </Scroll>
       </ListContainer>
+      { renderRoutes(props.route.routes)}
     </div>
   )
 }

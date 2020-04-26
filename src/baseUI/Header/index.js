@@ -16,7 +16,7 @@ const HeaderContainer = styled.div`
   .back{
     margin-left: 10px;
     font-size: 20px;
-    width: 20px
+    width: 20px;
   }
   >h1{
     padding-left: 10px;
@@ -28,7 +28,7 @@ const HeaderContainer = styled.div`
   }
   .head{
     position: absolute;
-    top:  4px;
+    top: 4px;
   }
   
 `
