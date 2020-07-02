@@ -4,7 +4,6 @@ import { IconStyle } from './assets/iconfont/iconfont';
 import { Provider } from 'react-redux'
 import store from './store/index'
 
-
 import routes from './routes/index';
 import { HashRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';//renderRoutes 读取路由配置转化为 Route 标签

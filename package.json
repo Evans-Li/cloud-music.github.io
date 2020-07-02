@@ -20,6 +20,7 @@
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.1.1",
+    "swiper": "^5.4.5",
     "yarn": "^16.9.8"
   },
   "scripts": {
@@ -49,6 +50,7 @@
     "@types/react-router-config": "^5.0.1",
     "@types/react-router-dom": "^5.1.5",
     "@types/redux-immutable": "^4.0.1",
+    "@types/swiper": "^5.4.0",
     "tslint": "^6.1.2",
     "tslint-react": "^5.0.0",
     "typescript": "^3.9.5"

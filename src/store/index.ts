@@ -3,12 +3,12 @@ import thunk from 'redux-thunk'
 import reducer from './reducer'
 
 
-declare global {
-  interface Window { MyNamespace: any; }
-}
-window.MyNamespace = window.MyNamespace || {};
-
-const composeEnhancers = window.MyNamespace.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// declare global {
+//   interface Window { MyNamespace: any; }
+// }
+// window.MyNamespace = window.MyNamespace || {};
+// window.MyNamespace.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||
+const composeEnhancers =  compose;
 
 const store = createStore (reducer, composeEnhancers (
   applyMiddleware (thunk)
