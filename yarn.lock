@@ -1109,6 +1109,74 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@better-scroll/core@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/@better-scroll/core/download/@better-scroll/core-2.0.0-beta.10.tgz#d76eb4b11e599b4c5b91e64d496f630d74f1ad84"
+  integrity sha1-1260sR5Zm0xbkeZNSW9jDXTxrYQ=
+  dependencies:
+    "@better-scroll/shared-utils" "^2.0.0-beta.10"
+
+"@better-scroll/mouse-wheel@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/@better-scroll/mouse-wheel/download/@better-scroll/mouse-wheel-2.0.0-beta.10.tgz#f690268b27b75b6fddcf1531a198977e8fd6bc31"
+  integrity sha1-9pAmiye3W2/dzxUxoZiXfo/WvDE=
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.10"
+
+"@better-scroll/observe-dom@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/@better-scroll/observe-dom/download/@better-scroll/observe-dom-2.0.0-beta.10.tgz#2291b12727dbd5ddabc1d45fa259898e47c00904"
+  integrity sha1-IpGxJyfb1d2rwdRfolmJjkfACQQ=
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.10"
+
+"@better-scroll/pull-down@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/@better-scroll/pull-down/download/@better-scroll/pull-down-2.0.0-beta.10.tgz#57a3b3b3784aa265ad26dfec48dccb658db36941"
+  integrity sha1-V6Ozs3hKomWtJt/sSNzLZY2zaUE=
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.10"
+
+"@better-scroll/pull-up@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/@better-scroll/pull-up/download/@better-scroll/pull-up-2.0.0-beta.10.tgz#09d88697693f96ea18b51f545124f3b4937c9a76"
+  integrity sha1-CdiGl2k/luoYtR9UUSTztJN8mnY=
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.10"
+
+"@better-scroll/scroll-bar@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/@better-scroll/scroll-bar/download/@better-scroll/scroll-bar-2.0.0-beta.10.tgz#17c6ac41c8302cac38596f62a670b742401d9a91"
+  integrity sha1-F8asQcgwLKw4WW9ipnC3QkAdmpE=
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.10"
+
+"@better-scroll/shared-utils@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/@better-scroll/shared-utils/download/@better-scroll/shared-utils-2.0.0-beta.10.tgz#077a245926ddcdbf5493aeda6724e2bf3bebf42f"
+  integrity sha1-B3okWSbdzb9Uk67aZyTivzvr9C8=
+
+"@better-scroll/slide@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/@better-scroll/slide/download/@better-scroll/slide-2.0.0-beta.10.tgz#171e71c3b78421d58027e1c5b867dcf9e248abe4"
+  integrity sha1-Fx5xw7eEIdWAJ+HFuGfc+eJIq+Q=
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.10"
+
+"@better-scroll/wheel@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/@better-scroll/wheel/download/@better-scroll/wheel-2.0.0-beta.10.tgz#c671b2158ab5af11adda8ad188e5e9fd27096659"
+  integrity sha1-xnGyFYq1rxGt2orRiOXp/ScJZlk=
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.10"
+
+"@better-scroll/zoom@^2.0.0-beta.10":
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/@better-scroll/zoom/download/@better-scroll/zoom-2.0.0-beta.10.tgz#4b05906db10eb694e350fd730ac241ef4f35707e"
+  integrity sha1-SwWQbbEOtpTjUP1zCsJB7081cH4=
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.10"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.npm.taobao.org/@cnakazawa/watch/download/@cnakazawa/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
@@ -1550,6 +1618,11 @@
   resolved "https://registry.npm.taobao.org/@types/color-name/download/@types/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha1-HBJhu+qhCoBVu8XYq4S3sq/IRqA=
 
+"@types/debounce@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/@types/debounce/download/@types/debounce-1.2.0.tgz#9ee99259f41018c640b3929e1bb32c3dcecdb192"
+  integrity sha1-numSWfQQGMZAs5KeG7MsPc7NsZI=
+
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/@types/eslint-visitor-keys/download/@types/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
@@ -1630,6 +1703,13 @@
   version "16.9.8"
   resolved "https://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.9.8.tgz#fe4c1e11dfc67155733dfa6aa65108b4971cb423"
   integrity sha1-/kweEd/GcVVzPfpqplEItJcctCM=
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-lazyload@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.npm.taobao.org/@types/react-lazyload/download/@types/react-lazyload-2.6.0.tgz#41cd9cbb2c03dd810377518d4837794469a521d1"
+  integrity sha1-Qc2cuywD3YEDd1GNSDd5RGmlIdE=
   dependencies:
     "@types/react" "*"
 
@@ -2334,6 +2414,13 @@ aws4@^1.8.0:
   resolved "https://registry.npm.taobao.org/aws4/download/aws4-1.10.0.tgz#a17b3a8ea811060e74d47d306122400ad4497ae2"
   integrity sha1-oXs6jqgRBg501H0wYSJACtRJeuI=
 
+axios@^0.19.2:
+  version "0.19.2"
+  resolved "https://registry.npm.taobao.org/axios/download/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
+  integrity sha1-PqNsXYgY0NX4qKl6bTa4bNwAyyc=
+  dependencies:
+    follow-redirects "1.5.10"
+
 axobject-query@^2.0.2:
   version "2.2.0"
   resolved "https://registry.npm.taobao.org/axobject-query/download/axobject-query-2.2.0.tgz?cache=0&sync_timestamp=1592784640678&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxobject-query%2Fdownload%2Faxobject-query-2.2.0.tgz#943d47e10c0b704aa42275e20edf3722648989be"
@@ -2538,6 +2625,21 @@ bcrypt-pbkdf@^1.0.0:
   integrity sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=
   dependencies:
     tweetnacl "^0.14.3"
+
+better-scroll@^2.0.0-beta.10:
+  version "2.0.0-beta.10"
+  resolved "https://registry.npm.taobao.org/better-scroll/download/better-scroll-2.0.0-beta.10.tgz#4c7b9dbc3e690d98fd4d82a190cb74a65dc5c6df"
+  integrity sha1-THudvD5pDZj9TYKhkMt0pl3Fxt8=
+  dependencies:
+    "@better-scroll/core" "^2.0.0-beta.10"
+    "@better-scroll/mouse-wheel" "^2.0.0-beta.10"
+    "@better-scroll/observe-dom" "^2.0.0-beta.10"
+    "@better-scroll/pull-down" "^2.0.0-beta.10"
+    "@better-scroll/pull-up" "^2.0.0-beta.10"
+    "@better-scroll/scroll-bar" "^2.0.0-beta.10"
+    "@better-scroll/slide" "^2.0.0-beta.10"
+    "@better-scroll/wheel" "^2.0.0-beta.10"
+    "@better-scroll/zoom" "^2.0.0-beta.10"
 
 big.js@^5.2.2:
   version "5.2.2"
@@ -3710,10 +3812,22 @@ data-urls@^1.0.0, data-urls@^1.1.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
+debounce@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/debounce/download/debounce-1.2.0.tgz#44a540abc0ea9943018dc0eaa95cce87f65cd131"
+  integrity sha1-RKVAq8DqmUMBjcDqqVzOh/Zc0TE=
+
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.npm.taobao.org/debug/download/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   integrity sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8=
+  dependencies:
+    ms "2.0.0"
+
+debug@=3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npm.taobao.org/debug/download/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  integrity sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=
   dependencies:
     ms "2.0.0"
 
@@ -4806,6 +4920,13 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
+follow-redirects@1.5.10:
+  version "1.5.10"
+  resolved "https://registry.npm.taobao.org/follow-redirects/download/follow-redirects-1.5.10.tgz?cache=0&sync_timestamp=1592518278637&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffollow-redirects%2Fdownload%2Ffollow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
+  integrity sha1-e3qfmuov3/NnhqlP9kPtB/T/Xio=
+  dependencies:
+    debug "=3.1.0"
+
 follow-redirects@^1.0.0:
   version "1.12.1"
   resolved "https://registry.npm.taobao.org/follow-redirects/download/follow-redirects-1.12.1.tgz?cache=0&sync_timestamp=1592518278637&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffollow-redirects%2Fdownload%2Ffollow-redirects-1.12.1.tgz#de54a6205311b93d60398ebc01cf7015682312b6"
@@ -5441,6 +5562,11 @@ immer@1.10.0:
   version "1.10.0"
   resolved "https://registry.npm.taobao.org/immer/download/immer-1.10.0.tgz?cache=0&sync_timestamp=1592986341779&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fimmer%2Fdownload%2Fimmer-1.10.0.tgz#bad67605ba9c810275d91e1c2a47d4582e98286d"
   integrity sha1-utZ2BbqcgQJ12R4cKkfUWC6YKG0=
+
+immer@^7.0.5:
+  version "7.0.5"
+  resolved "https://registry.npm.taobao.org/immer/download/immer-7.0.5.tgz?cache=0&sync_timestamp=1592986311731&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fimmer%2Fdownload%2Fimmer-7.0.5.tgz#8af347db5b60b40af8ae7baf1784ea4d35b5208e"
+  integrity sha1-ivNH21tgtAr4rnuvF4TqTTW1II4=
 
 immutable@^4.0.0-rc.1, immutable@^4.0.0-rc.12:
   version "4.0.0-rc.12"
@@ -8866,6 +8992,11 @@ react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-i
   resolved "https://registry.npm.taobao.org/react-is/download/react-is-16.13.1.tgz?cache=0&sync_timestamp=1592589618544&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-is%2Fdownload%2Freact-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
 
+react-lazyload@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/react-lazyload/download/react-lazyload-3.0.0.tgz#f9741daa823d95ddb4dd59527ca6b8845d1b4c3e"
+  integrity sha1-+XQdqoI9ld203VlSfKa4hF0bTD4=
+
 react-redux@^7.2.0:
   version "7.2.0"
   resolved "https://registry.npm.taobao.org/react-redux/download/react-redux-7.2.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-redux%2Fdownload%2Freact-redux-7.2.0.tgz#f970f62192b3981642fec46fd0db18a074fe879d"
@@ -11316,5 +11447,5 @@ yargs@^13.3.0:
 
 yarn@^16.9.8:
   version "2.0.0-rc.27"
-  resolved "https://registry.npm.taobao.org/yarn/download/yarn-2.0.0-rc.27.tgz?cache=0&sync_timestamp=1583770887223&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fyarn%2Fdownload%2Fyarn-2.0.0-rc.27.tgz#117838aaedfb89a257578313d6e0fd2ec420f3d4"
+  resolved "https://registry.npm.taobao.org/yarn/download/yarn-2.0.0-rc.27.tgz#117838aaedfb89a257578313d6e0fd2ec420f3d4"
   integrity sha1-EXg4qu37iaJXV4MT1uD9LsQg89Q=

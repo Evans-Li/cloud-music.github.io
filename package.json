@@ -8,6 +8,10 @@
     "@testing-library/user-event": "^7.1.2",
     "@types/react": "^16.9.41",
     "@types/styled-components": "^5.1.0",
+    "axios": "^0.19.2",
+    "better-scroll": "^2.0.0-beta.10",
+    "debounce": "^1.2.0",
+    "immer": "^7.0.5",
     "immutable": "^4.0.0-rc.12",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -45,12 +49,15 @@
     ]
   },
   "devDependencies": {
+    "@types/debounce": "^1.2.0",
+    "@types/react-lazyload": "^2.6.0",
     "@types/react-redux": "^7.1.9",
     "@types/react-router": "^5.1.8",
     "@types/react-router-config": "^5.0.1",
     "@types/react-router-dom": "^5.1.5",
     "@types/redux-immutable": "^4.0.1",
     "@types/swiper": "^5.4.0",
+    "react-lazyload": "^3.0.0",
     "tslint": "^6.1.2",
     "tslint-react": "^5.0.0",
     "typescript": "^3.9.5"

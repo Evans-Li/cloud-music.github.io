@@ -46,7 +46,7 @@ const Slider: React.FC<SliderPorps> = ({ bannerList = [] }) => {
             );
           })}
         </div>
-        <div className='swiper-pagination'></div>
+        <div className='swiper-pagination'></div> 
       </div>
     </SliderContainer>
 
