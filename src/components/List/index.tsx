@@ -12,7 +12,7 @@ function RecommendList(props: any) {
   const { recommendList } = props
 
   const enterDetails = (id: string | number) => {
-    props.history.push(`/recommend/'${id}`)
+    props.history.push(`/recommend/${id}`)
   }
 
   return (

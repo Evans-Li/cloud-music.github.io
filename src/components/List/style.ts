@@ -5,9 +5,9 @@ export const ListWrapper = styled.div`
   max-width: 100%;
   .title {
     font-weight: 700;
-    padding-left: 2vh;
+    padding-left: 2vw;
     font-size: 1rem;
-    line-height: 3rem;
+    line-height: 4rem;
   }
 `;
 export const List = styled.div`
