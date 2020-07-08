@@ -7,7 +7,7 @@ import {
 import { getRecommendListDetailsRequest } from './service'
 
 export const changeCurrentAlbum = (data: any) => ({
-  type: changeCurrentAlbum,
+  type: CHANGE_CURRENT_ALBUM,
   data
 })
 export const changePullUpLoading = (data: boolean) => ({
@@ -23,10 +23,10 @@ export const changeLoading = (data: boolean) => ({
 export const getAlbumList = (id: number, formUrl: string) => {
   let request: any;
   switch (formUrl) {
-    case 'recommend':
+    case '/recommend':
       request = getRecommendListDetailsRequest
       break;
-    case 'rank':
+    case '/rank':
       break;
     default:
       request = getRecommendListDetailsRequest

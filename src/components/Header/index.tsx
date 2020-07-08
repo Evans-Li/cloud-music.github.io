@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { HeaderContainer } from './style'
 
 interface HeaderPropsType {
@@ -9,21 +9,14 @@ interface HeaderPropsType {
 
 const Header = React.forwardRef((props: HeaderPropsType, ref) => {
   const {
-    handleClick = ()=>{console.log(111)},
+    handleClick = ()=>{},
     title = '歌单',
     isMarquee = false
   } = props
-  // const [title, setTitle] = useState('歌单')
-  // const [isMarquee, setIsMarquee] = useState(true)
-
-  // const handleClick = () => {
-
-  // }
   return (
-    <HeaderContainer>
-      <div>
+    <HeaderContainer ref={ ref as any}>
         <i className='iconfont back' onClick={handleClick}> &#xe655;</i>
-        {
+        {// eslint-disable-next-line
           isMarquee
             ?
             (<div className='marquee'>
@@ -32,7 +25,6 @@ const Header = React.forwardRef((props: HeaderPropsType, ref) => {
             :
             (<h1>{title}</h1>)
         }
-      </div>
     </HeaderContainer>
 
   )

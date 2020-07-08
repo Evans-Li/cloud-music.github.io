@@ -1,15 +1,16 @@
 
 import React from 'react';
 import { Redirect } from "react-router-dom";
+import { RouteConfig } from 'react-router-config';
 import Home from '../application/Home';
 import Recommend from '../application/Recommend';
 import Singers from '../application/Singers';
 import Rank from '../application/Rank';
 import Album from '../components/Album'
 
-export default [
+const routes: RouteConfig[] =[
   {
-    path: "/",
+    // path: "/",
     component: Home,
     routes: [
       {
@@ -21,6 +22,7 @@ export default [
       },
       {
         path: "/recommend",
+        key: 'recommend',
         component: Recommend,
         routes:[
           {
@@ -40,3 +42,6 @@ export default [
     ]
   }
 ]
+
+
+export default routes

@@ -3,13 +3,13 @@ import { CHANGE_PULL_UP_LOADING, CHANGE_LOADING , CHANGE_CURRENT_ALBUM} from './
 
 const defaultState = {
   currentAlbum: {
-    creator: {},
+    // creator: {},
   },
   pullUpLoading: false,
   loading: false,
   startIndex: 0,
   totalCount: 0,
-  scrollY: 0,
+  scrollY: 0, 
 };
 
 export default ( state = defaultState, action: any)=>{

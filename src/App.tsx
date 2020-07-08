@@ -10,9 +10,7 @@ import routes from './routes/index';
 import { HashRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';//renderRoutes 读取路由配置转化为 Route 标签
 
-type hello = {
-  d: number
-}
+
 function App() {
   return (
     <div className='app'>
